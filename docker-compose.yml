@@ -37,10 +37,10 @@ services:
 #   Services
 # ---------------------------
   discordMessageService:
-    image: discordmessageservice:latest
+    image: messagepublisherservice:latest
     build:
       context: .
-      dockerfile: DiscordMessageService/Dockerfile
+      dockerfile: MessagePublisherService/Dockerfile
     container_name: discordMessageService
     restart: always
     environment:

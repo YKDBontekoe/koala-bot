@@ -1,14 +1,12 @@
 using Discord;
 using Discord.WebSocket;
 using Infrastructure.Messaging.Configuration;
-using Infrastructure.Messaging.Handlers;
 using Infrastructure.Messaging.Handlers.Interfaces;
 using Koala.DiscordMessageService.Services;
 using Koala.DiscordMessageService.Services.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
-using InvalidOperationException = System.InvalidOperationException;
 
 namespace Koala.DiscordMessageService;
 
