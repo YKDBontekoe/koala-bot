@@ -1,0 +1,65 @@
+version: '3.8'
+services:
+  
+  # ---------------------------
+  #   MISC
+  # --------------------------- 
+  rabbitmq:
+    hostname: dev-rabbitmq
+    image: rabbitmq:3.9.16-management-alpine
+    container_name: rabbitmq
+    volumes:
+      - RabbitMqData:/var/lib/rabbitmq
+      - ./definitions.json:/opt/definitions.json:ro
+      # - ./enabled_plugins:/etc/rabbitmq/enabled_plugins
+      - ./rabbitmq.config:/etc/rabbitmq/rabbitmq.config:ro
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    restart: always
+    environment:
+      - RABBITMQ_DEFAULT_USER=user
+      - RABBITMQ_DEFAULT_PASS=pass
+    networks:
+      - koalaNetwork
+
+  logServer:
+    image: datalust/seq:latest
+    container_name: LogServer
+    ports:
+      - "5341:80"
+    environment:
+      - ACCEPT_EULA=Y
+    restart: always
+    networks:
+      - koalaNetwork
+# ---------------------------
+#   Services
+# ---------------------------
+  discordMessageService:
+    image: discordmessageservice:latest
+    build:
+      context: .
+      dockerfile: DiscordMessageService/Dockerfile
+    container_name: discordMessageService
+    restart: always
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      - rabbitmq
+    networks:
+      - koalaNetwork
+
+# ---------------------------
+#   Volumes
+# ---------------------------
+volumes:
+  RabbitMqData:
+    external: true
+
+# ---------------------------
+#   Network(s)
+# --------------------------- 
+networks:
+  koalaNetwork:
+    driver: bridge
