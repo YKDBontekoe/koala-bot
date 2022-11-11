@@ -1,12 +1,12 @@
 ﻿FROM mcr.microsoft.com/dotnet/sdk:6.0-bullseye-slim AS build
 WORKDIR /src
-COPY ["DiscordMessageService/DiscordMessageService.csproj", "MessageService/"]
+COPY ["MessagePublisherService/MessagePublisherService.csproj", "MessagePublisherService/"]
 COPY ["Infrastructure.Messaging/Infrastructure.Messaging.csproj", "Infrastructure.Messaging/"]
 RUN dotnet restore "MessageService/MessagePublisherService.csproj"
 
 COPY . .
-WORKDIR "/src/DiscordMessageService"
-RUN dotnet build "DiscordMessageService.csproj" -c Release -o /app/build
+WORKDIR "/src/MessagePublisherService"
+RUN dotnet build "MessagePublisherService.csproj" -c Release -o /app/build
 
 FROM build AS publish
 RUN dotnet publish "MessagePublisherService.csproj" -c Release -o /app/publish
