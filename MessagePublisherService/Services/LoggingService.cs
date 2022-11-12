@@ -1,10 +1,10 @@
 using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
-using Koala.DiscordMessageService.Services.Interfaces;
+using Koala.MessagePublisherService.Services.Interfaces;
 using Serilog.Core;
 
-namespace Koala.DiscordMessageService.Services;
+namespace Koala.MessagePublisherService.Services;
 
 public class LoggingService : ILoggingService
 {

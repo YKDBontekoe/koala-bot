@@ -1,7 +1,6 @@
 namespace Infrastructure.Common.Constants;
 
-public enum MessageTypes
+public static class MessageTypes
 {
-    MESSAGE_RECEIVED,
-    NONE
+    public const string MessageReceived = "MessageReceived";
 }

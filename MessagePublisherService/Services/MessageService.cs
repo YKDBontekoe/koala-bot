@@ -2,9 +2,9 @@ using Discord.WebSocket;
 using Infrastructure.Common.Constants;
 using Infrastructure.Common.Models;
 using Infrastructure.Messaging.Handlers.Interfaces;
-using Koala.DiscordMessageService.Services.Interfaces;
+using Koala.MessagePublisherService.Services.Interfaces;
 
-namespace Koala.DiscordMessageService.Services;
+namespace Koala.MessagePublisherService.Services;
 
 public class MessageService : IMessageService
 {
@@ -38,7 +38,7 @@ public class MessageService : IMessageService
             }
         };
         
-        await _publisher.PublishMessageAsync(MessageTypes.MESSAGE_RECEIVED, messageReceived, RoutingKeys.NONE);
+        await _publisher.PublishMessageAsync(MessageTypes.MessageReceived, messageReceived, RoutingKeys.NONE);
     }
 
     public void Initialize()

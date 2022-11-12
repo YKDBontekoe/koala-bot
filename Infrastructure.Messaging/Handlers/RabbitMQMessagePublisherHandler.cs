@@ -33,7 +33,7 @@ public class RabbitMqMessagePublisherHandler : IMessagePublisher, IDisposable
     {
     }
 
-    public RabbitMqMessagePublisherHandler(IEnumerable<string> hosts, string username, string password, string exchange,
+    private RabbitMqMessagePublisherHandler(IEnumerable<string> hosts, string username, string password, string exchange,
         int port)
     {
         _hosts = new List<string>(hosts);
@@ -71,9 +71,9 @@ public class RabbitMqMessagePublisherHandler : IMessagePublisher, IDisposable
     ///     Publish a message.
     /// </summary>
     /// <param name="messageType">Type of the message.</param>
-    /// <param name="message">The message to publish.</param>
+    /// <param name="message">The message to publish.</param> 
     /// <param name="routingKey">The routingkey to use (RabbitMQ specific).</param>
-    public Task PublishMessageAsync(MessageTypes messageType, object message, RoutingKeys routingKey)
+    public Task PublishMessageAsync(string messageType, object message, RoutingKeys routingKey)
     {
         return Task.Run(() =>
         {
@@ -81,7 +81,8 @@ public class RabbitMqMessagePublisherHandler : IMessagePublisher, IDisposable
             var body = Encoding.UTF8.GetBytes(data);
             var properties = _model.CreateBasicProperties();
             properties.Headers = new Dictionary<string, object> { { "MessageType", messageType } };
-            _model.BasicPublish(_exchange, routingKey.Equals(RoutingKeys.NONE) ? string.Empty : routingKey.ToString(), properties, body);
+            
+            _model.BasicPublish(_exchange, routingKey.ToString(), properties, body);
         });
     }
 

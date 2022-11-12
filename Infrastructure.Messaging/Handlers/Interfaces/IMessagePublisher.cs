@@ -4,5 +4,5 @@ namespace Infrastructure.Messaging.Handlers.Interfaces;
 
 public interface IMessagePublisher
 {
-    Task PublishMessageAsync(MessageTypes messageType, object message, RoutingKeys routingKey);
+    Task PublishMessageAsync(string messageType, object message, RoutingKeys routingKey);
 }

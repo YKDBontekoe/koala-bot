@@ -2,13 +2,13 @@ using Discord;
 using Discord.WebSocket;
 using Infrastructure.Messaging.Configuration;
 using Infrastructure.Messaging.Handlers.Interfaces;
-using Koala.DiscordMessageService.Services;
-using Koala.DiscordMessageService.Services.Interfaces;
+using Koala.MessagePublisherService.Services;
+using Koala.MessagePublisherService.Services.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 
-namespace Koala.DiscordMessageService;
+namespace Koala.MessagePublisherService;
 
 internal static class Program
 {
@@ -36,7 +36,7 @@ internal static class Program
 
                 services.UseRabbitMQMessagePublisher(hostContext.Configuration);
                 services.UseRabbitMQMessageHandler(hostContext.Configuration);
-                services.AddTransient<IMessageService>(_ => new global::Koala.DiscordMessageService.Services.MessageService(client,
+                services.AddTransient<IMessageService>(_ => new MessageService(client,
                     services.BuildServiceProvider().GetService<IMessagePublisher>() ??
                     throw new InvalidOperationException()));
             })

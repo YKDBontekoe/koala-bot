@@ -6,8 +6,8 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-        <AssemblyName>Koala.DiscordMessageService</AssemblyName>
-        <RootNamespace>Koala.DiscordMessageService</RootNamespace>
+        <AssemblyName>Koala.MessagePublisherService</AssemblyName>
+        <RootNamespace>Koala.MessagePublisherService</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

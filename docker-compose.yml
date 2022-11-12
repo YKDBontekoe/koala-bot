@@ -6,7 +6,7 @@ services:
   # --------------------------- 
   rabbitmq:
     hostname: dev-rabbitmq
-    image: rabbitmq:3.9.16-management-alpine
+    image: rabbitmq:3.11.3-management-alpine
     container_name: rabbitmq
     volumes:
       - RabbitMqData:/var/lib/rabbitmq
@@ -36,7 +36,7 @@ services:
 # ---------------------------
 #   Services
 # ---------------------------
-  discordMessageService:
+  dmessagePublisherService:
     image: messagepublisherservice:latest
     build:
       context: .
@@ -50,6 +50,19 @@ services:
     networks:
       - koalaNetwork
 
+  messageHandlerService:
+    image: messagehandlerservice:latest
+    build:
+      context: .
+      dockerfile: MessageHandlerService/Dockerfile
+    container_name: messageHandlerService
+    restart: always
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      - rabbitmq
+    networks:
+      - koalaNetwork
 # ---------------------------
 #   Volumes
 # ---------------------------

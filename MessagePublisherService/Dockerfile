@@ -2,7 +2,7 @@
 WORKDIR /src
 COPY ["MessagePublisherService/MessagePublisherService.csproj", "MessagePublisherService/"]
 COPY ["Infrastructure.Messaging/Infrastructure.Messaging.csproj", "Infrastructure.Messaging/"]
-RUN dotnet restore "MessageService/MessagePublisherService.csproj"
+RUN dotnet restore "MessagePublisherService/MessagePublisherService.csproj"
 
 COPY . .
 WORKDIR "/src/MessagePublisherService"

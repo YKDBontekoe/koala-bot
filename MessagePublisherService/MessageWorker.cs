@@ -1,12 +1,8 @@
-using Discord;
-using Discord.WebSocket;
-using Infrastructure.Common.Constants;
-using Infrastructure.Common.Models;
 using Infrastructure.Messaging.Handlers.Interfaces;
-using Koala.DiscordMessageService.Services.Interfaces;
+using Koala.MessagePublisherService.Services.Interfaces;
 using Microsoft.Extensions.Hosting;
 
-namespace Koala.DiscordMessageService;
+namespace Koala.MessagePublisherService;
 
 public class MessageWorker : IHostedService, IMessageHandlerCallback
 {
