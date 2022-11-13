@@ -4,3 +4,6 @@
 [submodule "KoalaMessageHandlerService"]
 	path = KoalaMessageHandlerService
 	url = git@github.com:YKDBontekoe/koala-bot-message-handler-service.git
+[submodule "KoalaMessageSenderService"]
+	path = KoalaMessageSenderService
+	url = git@github.com:YKDBontekoe/koala-bot-message-sender-service.git
