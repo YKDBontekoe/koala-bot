@@ -1,14 +1,15 @@
 using Infrastructure.Common.Constants;
 using Infrastructure.Messaging.Handlers.Interfaces;
 using Microsoft.Extensions.Hosting;
+using Serilog;
 
 namespace Koala.MessageHandlerService;
 
-public class MessageWorker : IHostedService, IMessageHandlerCallback 
+public class MessageHandlerWorker : IHostedService, IMessageHandlerCallback 
 {
     private readonly IMessageHandler _messageHandler;
 
-    public MessageWorker(IMessageHandler messageHandler)
+    public MessageHandlerWorker(IMessageHandler messageHandler)
     {
         _messageHandler = messageHandler;
     }
@@ -27,18 +28,23 @@ public class MessageWorker : IHostedService, IMessageHandlerCallback
 
     public Task<bool> HandleMessageAsync(string messageType, string message)
     {
-        // Handle the message by message type
-        switch (messageType)
+        try
         {
-            case MessageTypes.MessageReceived:
-                Console.WriteLine(message);
-                break;
-            default:
-                // Handle the message
-                Console.WriteLine($"Message type {messageType} not handled and has been ignored.");
-                break;
+            switch (messageType)
+            {
+                case MessageTypes.MessageReceived:
+                    Console.WriteLine(message);
+                    break;
+                default:
+                    // Handle the message
+                    Console.WriteLine($"Message type {messageType} not handled and has been ignored.");
+                    break;
+            }
+        } catch (Exception ex)
+        {
+            Log.Error("Error handling message: {ExMessage}", ex.Message);
         }
-        
+
         return Task.FromResult(true);
     }
 }

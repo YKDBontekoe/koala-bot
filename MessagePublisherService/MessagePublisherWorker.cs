@@ -4,13 +4,13 @@ using Microsoft.Extensions.Hosting;
 
 namespace Koala.MessagePublisherService;
 
-public class MessageWorker : IHostedService, IMessageHandlerCallback
+public class MessagePublisherWorker : IHostedService, IMessageHandlerCallback
 {
     private readonly IMessageHandler _messageHandler;
     private readonly IMessageService _messageService;
     private readonly ILoggingService _loggingService;
 
-    public MessageWorker(IMessageHandler messageHandler, IMessageService messageService, ILoggingService loggingService)
+    public MessagePublisherWorker(IMessageHandler messageHandler, IMessageService messageService, ILoggingService loggingService)
     {
         _messageHandler = messageHandler;
         _messageService = messageService;

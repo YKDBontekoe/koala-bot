@@ -23,7 +23,7 @@ public class MessageService : IMessageService
         if (arg.Author.IsBot) return;
         if (arg is not SocketUserMessage message) return;
         
-        var messageReceived = new UserMessageReceived()
+        var messageReceived = new BaseMessage()
         {
             Message = message.Content,
             Channel = new BaseChannel

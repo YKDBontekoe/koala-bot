@@ -1,6 +1,6 @@
 namespace Infrastructure.Common.Models;
 
-public class UserMessageReceived
+public class BaseMessage
 {
     public BaseUser User { get; set; }
     public BaseChannel Channel { get; set; }

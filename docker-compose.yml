@@ -1,9 +1,8 @@
 version: '3.8'
-services:
-  
+services:  
   # ---------------------------
   #   MISC
-  # --------------------------- 
+  # ---------------------------                           n
   rabbitmq:
     hostname: dev-rabbitmq
     image: rabbitmq:3.11.3-management-alpine
@@ -33,6 +32,24 @@ services:
     restart: always
     networks:
       - koalaNetwork
+
+# ---------------------------
+#   Databases - NOSQL
+# ---------------------------
+  messageMongoDbServer:
+    image: mongo:latest
+    container_name: messageMongoDbServer
+    volumes:
+      - MessageMongoDbServerData:/var/opt/mongodb
+    ports:
+      - "1435:1433"
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=Developer
+      - MONGO_INITDB_ROOT_PASSWORD=8jkGh47hnDw89Haq8LN2
+    networks:
+      - koalaNetwork
+
 # ---------------------------
 #   Services
 # ---------------------------
@@ -63,11 +80,14 @@ services:
       - rabbitmq
     networks:
       - koalaNetwork
+
 # ---------------------------
 #   Volumes
 # ---------------------------
 volumes:
   RabbitMqData:
+    external: true
+  MessageMongoDbServerData:
     external: true
 
 # ---------------------------

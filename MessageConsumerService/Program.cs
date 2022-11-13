@@ -1,9 +1,12 @@
 ﻿using Infrastructure.Messaging.Configuration;
+using Koala.MessageConsumerService.Options;
+using Koala.MessageConsumerService.Repositories;
+using Koala.MessageConsumerService.Repositories.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 
-namespace Koala.MessageHandlerService;
+namespace Koala.MessageConsumerService;
 
 internal static class Program
 {
@@ -13,9 +16,11 @@ internal static class Program
             .CreateDefaultBuilder(args)
             .ConfigureServices((hostContext, services) =>
             {
-                services.UseRabbitMQMessagePublisher(hostContext.Configuration);
                 services.UseRabbitMQMessageHandler(hostContext.Configuration);
-                services.AddHostedService<MessageHandlerWorker>();
+                services.Configure<MongoConfiguration>(hostContext.Configuration.GetSection("MongoDB"));
+                services.AddScoped<IMessageRepository, MessageRepository>();
+                
+                services.AddHostedService<MessageConsumerWorker>();
             })
             .UseSerilog((hostContext, loggerConfiguration) =>
             {

@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageHandlerService", "Me
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageSenderService", "MessageSenderService\MessageSenderService.csproj", "{1364D3C2-32D6-4B0F-A7FD-2C1BB4D18D7B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageConsumerService", "MessageConsumerService\MessageConsumerService.csproj", "{31CA48B0-B1D5-4499-A50B-9A8A6CA94E0F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{1364D3C2-32D6-4B0F-A7FD-2C1BB4D18D7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1364D3C2-32D6-4B0F-A7FD-2C1BB4D18D7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1364D3C2-32D6-4B0F-A7FD-2C1BB4D18D7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31CA48B0-B1D5-4499-A50B-9A8A6CA94E0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31CA48B0-B1D5-4499-A50B-9A8A6CA94E0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31CA48B0-B1D5-4499-A50B-9A8A6CA94E0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31CA48B0-B1D5-4499-A50B-9A8A6CA94E0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A94810F5-C596-48B2-BD6F-BCEFF36CB451} = {1CAEE358-CCA7-436D-B6DA-285D142E579B}

@@ -19,7 +19,8 @@ internal static class Program
             .ConfigureServices((hostContext, services) =>
             {
                 services.UseRabbitMQMessagePublisher(hostContext.Configuration);
-                services.AddHostedService<MessageWorker>();
+                services.UseRabbitMQMessageHandler(hostContext.Configuration);
+                services.AddHostedService<MessagePublisherWorker>();
                 
                 var config = new DiscordSocketConfig
                 {
@@ -33,9 +34,7 @@ internal static class Program
                 
                 services.AddTransient<ILoggingService>(_ => 
                     new LoggingService(client));
-
-                services.UseRabbitMQMessagePublisher(hostContext.Configuration);
-                services.UseRabbitMQMessageHandler(hostContext.Configuration);
+                
                 services.AddTransient<IMessageService>(_ => new MessageService(client,
                     services.BuildServiceProvider().GetService<IMessagePublisher>() ??
                     throw new InvalidOperationException()));
