@@ -10,7 +10,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KoalaMessagePublisherServic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageHandlerService", "KoalaMessageHandlerService\KoalaMessageHandlerService.csproj", "{2A027DFC-2492-4183-AF61-0F652D7D480B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageSenderService", "MessageSenderService\MessageSenderService.csproj", "{1364D3C2-32D6-4B0F-A7FD-2C1BB4D18D7B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageSenderService", "KoalaMessageSenderService\KoalaMessageSenderService.csproj", "{1364D3C2-32D6-4B0F-A7FD-2C1BB4D18D7B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageConsumerService", "MessageConsumerService\MessageConsumerService.csproj", "{31CA48B0-B1D5-4499-A50B-9A8A6CA94E0F}"
 EndProject
