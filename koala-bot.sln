@@ -6,7 +6,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Messaging", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{1CAEE358-CCA7-436D-B6DA-285D142E579B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessagePublisherService", "MessagePublisherService\MessagePublisherService.csproj", "{EBD73E14-74D0-44DB-9A50-82FD6B328592}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KoalaMessagePublisherService", "KoalaMessagePublisherService\KoalaMessagePublisherService.csproj", "{EBD73E14-74D0-44DB-9A50-82FD6B328592}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageHandlerService", "MessageHandlerService\MessageHandlerService.csproj", "{2A027DFC-2492-4183-AF61-0F652D7D480B}"
 EndProject
