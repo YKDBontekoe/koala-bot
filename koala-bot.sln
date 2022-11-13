@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Common", "Infrastructure.Common\Infrastructure.Common.csproj", "{A94810F5-C596-48B2-BD6F-BCEFF36CB451}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koala.Infrastructure.Common", "Koala.Infrastructure.Common\Koala.Infrastructure.Common.csproj", "{A94810F5-C596-48B2-BD6F-BCEFF36CB451}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Messaging", "Infrastructure.Messaging\Infrastructure.Messaging.csproj", "{3B70E437-443C-46BE-ACD6-C25629BC35CE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Messaging", "Koala.Infrastructure.Messaging\Koala.Infrastructure.Messaging.csproj", "{3B70E437-443C-46BE-ACD6-C25629BC35CE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{1CAEE358-CCA7-436D-B6DA-285D142E579B}"
 EndProject
