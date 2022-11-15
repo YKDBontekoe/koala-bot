@@ -13,3 +13,6 @@
 [submodule "Koala.Infrastructure.Messaging"]
 	path = Koala.Infrastructure.Messaging
 	url = git@github.com:YKDBontekoe/rabbitmq-messaging-framework.git
+[submodule "Koala.Infrastructure.Common"]
+	path = Koala.Infrastructure.Common
+	url = git@github.com:YKDBontekoe/koala-common-configuration.git
