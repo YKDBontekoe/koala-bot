@@ -1,18 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koala.Infrastructure.Common", "Koala.Infrastructure.Common\Koala.Infrastructure.Common.csproj", "{A94810F5-C596-48B2-BD6F-BCEFF36CB451}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Messaging", "Koala.Infrastructure.Messaging\Koala.Infrastructure.Messaging.csproj", "{3B70E437-443C-46BE-ACD6-C25629BC35CE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koala.Infrastructure.Message.Messaging", "Koala.Infrastructure.Message.Messaging\Koala.Infrastructure.Messaging.csproj", "{3B70E437-443C-46BE-ACD6-C25629BC35CE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{1CAEE358-CCA7-436D-B6DA-285D142E579B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KoalaMessagePublisherService", "KoalaMessagePublisherService\KoalaMessagePublisherService.csproj", "{EBD73E14-74D0-44DB-9A50-82FD6B328592}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koala.Message.Publisher", "Koala.Message.Publisher\KoalaMessagePublisherService.csproj", "{EBD73E14-74D0-44DB-9A50-82FD6B328592}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageHandlerService", "KoalaMessageHandlerService\KoalaMessageHandlerService.csproj", "{2A027DFC-2492-4183-AF61-0F652D7D480B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koala.Message.Handler", "Koala.Message.Handler\KoalaMessageHandlerService.csproj", "{2A027DFC-2492-4183-AF61-0F652D7D480B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageSenderService", "KoalaMessageSenderService\KoalaMessageSenderService.csproj", "{1364D3C2-32D6-4B0F-A7FD-2C1BB4D18D7B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koala.Message.Sender", "Koala.Message.Sender\KoalaMessageSenderService.csproj", "{1364D3C2-32D6-4B0F-A7FD-2C1BB4D18D7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageConsumerService", "KoalaMessageConsumerService\KoalaMessageConsumerService.csproj", "{31CA48B0-B1D5-4499-A50B-9A8A6CA94E0F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koala.Message.Consumer", "Koala.Message.Consumer\KoalaMessageConsumerService.csproj", "{31CA48B0-B1D5-4499-A50B-9A8A6CA94E0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -29,5 +29,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Infrastructure.Messaging\Infrastructure.Messaging.csproj" />
+      <ProjectReference Include="..\Koala.Infrastructure.Message.Messaging\Koala.Infrastructure.Messaging.csproj" />
     </ItemGroup>
 </Project>

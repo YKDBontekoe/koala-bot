@@ -1,4 +1,4 @@
-using Infrastructure.Common.Models;
+using Koala.MessageConsumerService.Models;
 
 namespace Koala.MessageConsumerService.Repositories.Interfaces;
 

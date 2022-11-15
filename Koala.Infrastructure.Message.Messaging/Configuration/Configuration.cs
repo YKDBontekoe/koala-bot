@@ -1,6 +1,8 @@
 using System.Text;
 using Infrastructure.Messaging.Handlers;
 using Infrastructure.Messaging.Handlers.Interfaces;
+using Koala.Infrastructure.Messaging.Handlers;
+using Koala.Infrastructure.Messaging.Handlers.Interfaces;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 

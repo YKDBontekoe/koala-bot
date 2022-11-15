@@ -1,4 +1,4 @@
-using Infrastructure.Common.Models;
+using Koala.MessageConsumerService.Models;
 using Koala.MessageConsumerService.Options;
 using Koala.MessageConsumerService.Repositories.Interfaces;
 using Microsoft.Extensions.Options;

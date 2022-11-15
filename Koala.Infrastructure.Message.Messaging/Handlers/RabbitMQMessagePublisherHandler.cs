@@ -1,11 +1,11 @@
 using System.Text;
-using Infrastructure.Common.Constants;
-using Infrastructure.Messaging.Handlers.Interfaces;
+using Infrastructure.Messaging.Handlers;
+using Koala.Infrastructure.Messaging.Handlers.Interfaces;
 using Polly;
 using RabbitMQ.Client;
 using Serilog;
 
-namespace Infrastructure.Messaging.Handlers;
+namespace Koala.Infrastructure.Messaging.Handlers;
 
 public class RabbitMqMessagePublisherHandler : IMessagePublisher, IDisposable
 {
@@ -73,7 +73,7 @@ public class RabbitMqMessagePublisherHandler : IMessagePublisher, IDisposable
     /// <param name="messageType">Type of the message.</param>
     /// <param name="message">The message to publish.</param> 
     /// <param name="routingKey">The routingkey to use (RabbitMQ specific).</param>
-    public Task PublishMessageAsync(string messageType, object message, RoutingKeys routingKey)
+    public Task PublishMessageAsync(string messageType, object message, string routingKey)
     {
         return Task.Run(() =>
         {
@@ -82,7 +82,7 @@ public class RabbitMqMessagePublisherHandler : IMessagePublisher, IDisposable
             var properties = _model.CreateBasicProperties();
             properties.Headers = new Dictionary<string, object> { { "MessageType", messageType } };
             
-            _model.BasicPublish(_exchange, routingKey.ToString(), properties, body);
+            _model.BasicPublish(_exchange, routingKey, properties, body);
         });
     }
 
