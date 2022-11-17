@@ -1,0 +1,15 @@
+[submodule "Koala.Messaging.Publisher.Service"]
+	path = Koala.Messaging.Publisher.Service
+	url = https://github.com/YKDBontekoe/koala-bot-message-publisher-service.git
+[submodule "Koala.Messaging.Handler.Service"]
+	path = Koala.Messaging.Handler.Service
+	url = https://github.com/YKDBontekoe/koala-bot-message-handler-service.git
+[submodule "Koala.Messaging.Sender.Service"]
+	path = Koala.Messaging.Sender.Service
+	url = https://github.com/YKDBontekoe/koala-bot-message-sender-service.git
+[submodule "Koala.Messaging.Consumer.Service"]
+	path = Koala.Messaging.Consumer.Service
+	url = https://github.com/YKDBontekoe/koala-bot-message-consumer-service.git
+[submodule "Koala.Infrastructure.Messaging"]
+	path = Koala.Infrastructure.Messaging
+	url = https://github.com/YKDBontekoe/rabbitmq-messaging-framework.git
