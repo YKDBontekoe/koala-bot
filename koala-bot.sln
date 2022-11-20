@@ -1,16 +1,13 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koala.Infrastructure.Messaging", "Koala.Infrastructure.Messaging\Koala.Infrastructure.Messaging.csproj", "{3B70E437-443C-46BE-ACD6-C25629BC35CE}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{1CAEE358-CCA7-436D-B6DA-285D142E579B}"
-EndProject
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koala.Messaging.Publisher.Service", "Koala.Messaging.Publisher.Service\Koala.Messaging.Publisher.Service.csproj", "{EBD73E14-74D0-44DB-9A50-82FD6B328592}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koala.Messaging.Handler.Service", "Koala.Messaging.Handler.Service\Koala.Messaging.Handler.Service.csproj", "{2A027DFC-2492-4183-AF61-0F652D7D480B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koala.Messaging.Sender.Service", "Koala.Messaging.Sender.Service\KoalaMessageSenderService.csproj", "{1364D3C2-32D6-4B0F-A7FD-2C1BB4D18D7B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koala.Messaging.Sender.Service", "Koala.Messaging.Sender.Service\Koala.Messaging.Sender.Service.csproj", "{1364D3C2-32D6-4B0F-A7FD-2C1BB4D18D7B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koala.Messaging.Consumer.Service", "Koala.Messaging.Consumer.Service\Koala.Messaging.Consumer.Service.csproj", "{31CA48B0-B1D5-4499-A50B-9A8A6CA94E0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koala.Command.Handler.Service", "Koala.Command.Handler.Service\Koala.Command.Handler.Service.csproj", "{E6D44478-63D3-4642-A46C-001E7725B197}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,14 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A94810F5-C596-48B2-BD6F-BCEFF36CB451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A94810F5-C596-48B2-BD6F-BCEFF36CB451}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A94810F5-C596-48B2-BD6F-BCEFF36CB451}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A94810F5-C596-48B2-BD6F-BCEFF36CB451}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3B70E437-443C-46BE-ACD6-C25629BC35CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3B70E437-443C-46BE-ACD6-C25629BC35CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3B70E437-443C-46BE-ACD6-C25629BC35CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3B70E437-443C-46BE-ACD6-C25629BC35CE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EBD73E14-74D0-44DB-9A50-82FD6B328592}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EBD73E14-74D0-44DB-9A50-82FD6B328592}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBD73E14-74D0-44DB-9A50-82FD6B328592}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -42,9 +31,9 @@ Global
 		{31CA48B0-B1D5-4499-A50B-9A8A6CA94E0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31CA48B0-B1D5-4499-A50B-9A8A6CA94E0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31CA48B0-B1D5-4499-A50B-9A8A6CA94E0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6D44478-63D3-4642-A46C-001E7725B197}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6D44478-63D3-4642-A46C-001E7725B197}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{A94810F5-C596-48B2-BD6F-BCEFF36CB451} = {1CAEE358-CCA7-436D-B6DA-285D142E579B}
-		{3B70E437-443C-46BE-ACD6-C25629BC35CE} = {1CAEE358-CCA7-436D-B6DA-285D142E579B}
 	EndGlobalSection
 EndGlobal
