@@ -16,3 +16,6 @@
 [submodule "Koala.Command.Handler.Service"]
 	path = Koala.Command.Handler.Service
 	url = https://github.com/YKDBontekoe/koala-bot-command-handler-service.git
+[submodule "Koala.Attachment.Handler.Service"]
+	path = Koala.Attachment.Handler.Service
+	url = https://github.com/YKDBontekoe/koala-bot-attachment-handler.git
