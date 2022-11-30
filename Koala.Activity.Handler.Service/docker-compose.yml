@@ -1,9 +1,0 @@
-﻿version: '3.8'
-services:
-  koala-activity-handler:
-    image: koala-activity-handler
-    build:
-      context: .
-      dockerfile: Dockerfile
-    environment:
-      - DOTNET_ENVIRONMENT=Development
