@@ -22,3 +22,7 @@
 [submodule "Koala.Attachment.Consumer.Service"]
 	path = Koala.Attachment.Consumer.Service
 	url = https://github.com/YKDBontekoe/koala-bot-attachment-consumer.git
+[submodule "Koala.Activity.Publisher.Service"]
+	path = Koala.Activity.Publisher.Service
+	url = C:\\Users\\Youri\\RiderProjects\\koala-bot\\Koala.Activity.Publisher.Service
+	branch = main
