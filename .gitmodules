@@ -25,3 +25,7 @@
 [submodule "Koala.Activity.Publisher.Service"]
 	path = Koala.Activity.Publisher.Service
 	url = https://github.com/YKDBontekoe/koala-bot-activity-publisher-service.git
+[submodule "Koala.Activity.Consumer.Service"]
+	path = Koala.Activity.Consumer.Service
+	url = https://github.com/YKDBontekoe/koala-bot-activity-consumer-service.git
+	branch = main
