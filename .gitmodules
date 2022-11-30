@@ -29,3 +29,7 @@
 	path = Koala.Activity.Consumer.Service
 	url = https://github.com/YKDBontekoe/koala-bot-activity-consumer-service.git
 	branch = main
+[submodule "Koala.Activity.Handler.Service"]
+	path = Koala.Activity.Handler.Service
+	url = https://github.com/YKDBontekoe/koala-bot-activity-handler-service.git
+	branch = main
