@@ -10,9 +10,6 @@
 [submodule "Koala.Messaging.Consumer.Service"]
 	path = Koala.Messaging.Consumer.Service
 	url = https://github.com/YKDBontekoe/koala-bot-message-consumer-service.git
-[submodule "Koala.Infrastructure.Messaging"]
-	path = Koala.Infrastructure.Messaging
-	url = https://github.com/YKDBontekoe/rabbitmq-messaging-framework.git
 [submodule "Koala.Command.Handler.Service"]
 	path = Koala.Command.Handler.Service
 	url = https://github.com/YKDBontekoe/koala-bot-command-handler-service.git
