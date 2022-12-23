@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koala.Activity.Consumer.Ser
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koala.Activity.Handler.Service", "Koala.Activity.Handler.Service\Koala.Activity.Handler.Service.csproj", "{72039042-FA1D-4A98-9736-EB67C5F4FE53}"
 EndProject
+Project("{D3A029B1-20E8-4F16-A7C0-AC474EABB98C}") = "Koala.Presence.Publisher.Service", "Koala.Presence.Publisher.Service\Koala.Presence.Publisher.Service.csproj", "{72039042-FA1D-4A98-9736-EB67C5F4FE53}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presence", "Presence", "{AD35AF36-FCC4-4D29-880D-AE00CDD5D963}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -82,6 +86,6 @@ Global
 		{1364D3C2-32D6-4B0F-A7FD-2C1BB4D18D7B} = {4DC541C9-84C7-419C-AD28-EC824E7978D7}
 		{53E2D131-0DB0-4521-8FAB-3DC19F223F24} = {34D7F545-06AB-43F4-8944-AE54EAC7CE88}
 		{7E260D9D-9FCB-46EE-BD31-C11301515532} = {34D7F545-06AB-43F4-8944-AE54EAC7CE88}
-		{72039042-FA1D-4A98-9736-EB67C5F4FE53} = {34D7F545-06AB-43F4-8944-AE54EAC7CE88}
+		{72039042-FA1D-4A98-9736-EB67C5F4FE53} = {AD35AF36-FCC4-4D29-880D-AE00CDD5D963}
 	EndGlobalSection
 EndGlobal
