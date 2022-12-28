@@ -27,10 +27,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koala.Activity.Consumer.Ser
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koala.Activity.Handler.Service", "Koala.Activity.Handler.Service\Koala.Activity.Handler.Service.csproj", "{72039042-FA1D-4A98-9736-EB67C5F4FE53}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presence", "Presence", "{AD35AF36-FCC4-4D29-880D-AE00CDD5D963}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koala.Presence.Publisher.Service", "Koala.Presence.Publisher.Service\Koala.Presence.Publisher.Service.csproj", "{D0AA8879-A8EA-4A4E-ADBD-B4073E5D7F94}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,10 +67,8 @@ Global
 		{7E260D9D-9FCB-46EE-BD31-C11301515532}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E260D9D-9FCB-46EE-BD31-C11301515532}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E260D9D-9FCB-46EE-BD31-C11301515532}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D0AA8879-A8EA-4A4E-ADBD-B4073E5D7F94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D0AA8879-A8EA-4A4E-ADBD-B4073E5D7F94}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D0AA8879-A8EA-4A4E-ADBD-B4073E5D7F94}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D0AA8879-A8EA-4A4E-ADBD-B4073E5D7F94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72039042-FA1D-4A98-9736-EB67C5F4FE53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72039042-FA1D-4A98-9736-EB67C5F4FE53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E2A422E8-E4DA-469F-AD67-38F38AB3561D} = {84379FAA-4D2E-4530-B076-9BB3AF856FAC}
@@ -87,6 +81,5 @@ Global
 		{53E2D131-0DB0-4521-8FAB-3DC19F223F24} = {34D7F545-06AB-43F4-8944-AE54EAC7CE88}
 		{7E260D9D-9FCB-46EE-BD31-C11301515532} = {34D7F545-06AB-43F4-8944-AE54EAC7CE88}
 		{72039042-FA1D-4A98-9736-EB67C5F4FE53} = {34D7F545-06AB-43F4-8944-AE54EAC7CE88}
-		{D0AA8879-A8EA-4A4E-ADBD-B4073E5D7F94} = {AD35AF36-FCC4-4D29-880D-AE00CDD5D963}
 	EndGlobalSection
 EndGlobal
